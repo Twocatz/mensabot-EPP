@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniwue.jpp.mensabot.gui.Controller">
+  <tabs>
+    <Tab fx:id="tabPipelining" text="Pipelining">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <HBox prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="labelFormattersinPipelining" graphicTextGap="15.0" prefHeight="42.0" prefWidth="220.0" text="Formatters">
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="labelFetchSaveFormatSendInPipelining" prefHeight="37.0" prefWidth="328.0" text="Fetch, Parse, Format and Send MensaData">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <ListView fx:id="listOfFormattersInPipeliningTab" prefHeight="673.0" prefWidth="200.0" style="-fx-background-color: GREEN;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="200.0" left="10.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </left>
+               <center>
+                  <VBox prefHeight="632.0" prefWidth="790.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="buttonFetchNSafeInPipelining" mnemonicParsing="false" onAction="#fetchingNsaving" text="Fetch&amp;Save">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="buttonFormatInPipelining" mnemonicParsing="false" onAction="#formatting" text="Format">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="buttonSendInPipelining" mnemonicParsing="false" onAction="#sendingData" text="Send">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="display" alignment="TOP_LEFT" prefHeight="371.0" prefWidth="790.0" text="Label" visible="false">
+                           <opaqueInsets>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </opaqueInsets></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </opaqueInsets>
+                  </VBox>
+               </center>
+               <bottom>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <Label fx:id="statisticsLabel" prefHeight="25.0" prefWidth="217.0" text="Statistiken">
+                           <opaqueInsets>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="analyzerResults" alignment="TOP_LEFT" prefHeight="220.0" prefWidth="1003.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </VBox.margin></Label>
+                     </children>
+                  </VBox>
+               </bottom>
+            </BorderPane>
+         </content>
+    </Tab>
+    <Tab fx:id="tabFormatterCreation" text="Formatter Creation">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <ListView fx:id="listViewInFormatterTab" prefHeight="425.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="200.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin></ListView>
+               </left>
+               <center>
+                  <VBox prefHeight="771.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Create new Formatter from Format">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextArea fx:id="formatWithDollarSigns" prefHeight="200.0" prefWidth="719.0" promptText="Enter the format with $ here">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+                           </VBox.margin></TextArea>
+                        <TextField fx:id="enterName" promptText="Enter name for Formatter">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Analyzers available">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin></Label>
+                        <ListView fx:id="listViewOfAnalyzers" prefHeight="150.0" prefWidth="366.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="15.0" />
+                           </VBox.margin></ListView>
+                        <Button fx:id="selectAnalyzerButton" mnemonicParsing="false" onAction="#selectAnalyzer" text="Select Analyzer">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label text="Selected Analyzers (ordered by appearence in formatted text)">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin></Label>
+                        <ListView fx:id="listOfSelectedAnalyzers" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </ListView>
+                        <HBox prefHeight="45.0" prefWidth="478.0">
+                           <children>
+                              <Button fx:id="deselectAnalyzer" mnemonicParsing="false" onAction="#deselectAnalyzer" text="Deselect Analyzer">
+                                 <HBox.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearList" text="Clear">
+                                 <HBox.margin>
+                                    <Insets bottom="15.0" left="5.0" right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Button fx:id="createNewFormatterWithFormat" mnemonicParsing="false" onAction="#createNewFormatterFromFormatWithName" text="Create New Formatter">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </center>
+               <right>
+                  <VBox prefHeight="771.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Create new Formatter with Headline from Analyzer">
+                           <VBox.margin>
+                              <Insets left="15.0" top="15.0" />
+                           </VBox.margin></Label>
+                        <TextField fx:id="headline" promptText="Enter the headline here, i.e. AveragePrice">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></TextField>
+                        <ListView fx:id="listViewOfAnalyzersOnTheRight" prefHeight="200.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></ListView>
+                        <TextField fx:id="enterNameRight" promptText="Enter name here">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></TextField>
+                        <Button fx:id="createNewFormatter" mnemonicParsing="false" onAction="#createNewFormatterFromAnalyzer" text="Create new Formatter">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></Button>
+                     </children>
+                  </VBox>
+               </right>
+            </BorderPane>
+         </content>
+    </Tab>
+      <Tab id="tabDiagrams" text="Diagrams">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <LineChart fx:id="baseStats" prefHeight="256.0" prefWidth="1000.0" title="Base Stats">
+                    <xAxis>
+                      <CategoryAxis prefHeight="39.0" prefWidth="943.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <PieChart id="prizeRangePie" fx:id="prizeRangePieChart" prefHeight="247.0" prefWidth="756.0" title="Prize Range Pie" />
+                  <BarChart id="amountOfDishesPerWeekday" fx:id="amountsOfDishesPerWeekday" prefHeight="272.0" prefWidth="1000.0" title="Amount of Dishes per Weekday">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Button fx:id="updateDiagramsButton" mnemonicParsing="false" onAction="#updateDiagrams" text="Update">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab id="tabStats" text="Stats">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewInStats" prefHeight="730.0" prefWidth="1000.0">
+                    <columns>
+                      <TableColumn fx:id="nameOfAnalyzer" minWidth="100.0" prefWidth="200.0" text="Name" />
+                      <TableColumn fx:id="resultSingleMenu" minWidth="450.0" prefWidth="75.0" text="Single Menu" />
+                        <TableColumn fx:id="resultAllMenus" minWidth="600.0" prefWidth="75.0" text="All Menus" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="updateStatsButton" mnemonicParsing="false" onAction="#updateStats" text="Update">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab id="tabLogView" text="Log View">
+         <content>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="771.0" prefWidth="188.0">
+                     <children>
+                        <Label text="Search">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></Label>
+                        <TextField fx:id="searchField">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </VBox.margin></TextField>
+                        <Button fx:id="Update" mnemonicParsing="false" onAction="#updateLogView" text="Update">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="590.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="logView" prefHeight="771.0" prefWidth="815.0" />
+               </children>
+            </HBox>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

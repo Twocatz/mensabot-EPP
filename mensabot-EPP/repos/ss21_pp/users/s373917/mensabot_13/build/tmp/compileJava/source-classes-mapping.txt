@@ -1,0 +1,89 @@
+de/uniwue/jpp/mensabot/sending/formatting/analyse/MedianPrizeAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.MedianPrizeAnalyzer
+de/uniwue/jpp/mensabot/sending/formatting/FormatterFromAnalyzer2.java
+ de.uniwue.jpp.mensabot.sending.formatting.FormatterFromAnalyzer2
+de/uniwue/jpp/mensabot/sending/formatting/analyse/MostOfferedMealOfWeek.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.MostOfferedMealOfWeek
+de/uniwue/jpp/mensabot/sending/formatting/SimpleFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.SimpleFormatter
+de/uniwue/jpp/mensabot/dataclasses/MensaMeals.java
+ de.uniwue.jpp.mensabot.dataclasses.MensaMeals
+de/uniwue/jpp/mensabot/retrieval/FetchData.java
+ de.uniwue.jpp.mensabot.retrieval.FetchData
+de/uniwue/jpp/mensabot/retrieval/ParseData.java
+ de.uniwue.jpp.mensabot.retrieval.ParseData
+de/uniwue/jpp/mensabot/retrieval/Fetcher.java
+ de.uniwue.jpp.mensabot.retrieval.Fetcher
+de/uniwue/jpp/mensabot/sending/formatting/analyse/MaxPrizeMealAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.MaxPrizeMealAnalyzer
+de/uniwue/jpp/mensabot/gui/MensabotGui.java
+ de.uniwue.jpp.mensabot.gui.MensabotGui
+de/uniwue/jpp/mensabot/sending/formatting/analyse/AveragePrizeAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.AveragePrizeAnalyzer
+de/uniwue/jpp/mensabot/sending/formatting/analyse/PrizeRangeAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.PrizeRangeAnalyzer
+de/uniwue/jpp/mensabot/Controller.java
+ de.uniwue.jpp.mensabot.Controller
+de/uniwue/jpp/mensabot/dataclasses/Menu.java
+ de.uniwue.jpp.mensabot.dataclasses.Menu
+de/uniwue/jpp/mensabot/sending/formatting/SimpleMealFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.SimpleMealFormatter
+de/uniwue/jpp/errorhandling/OptionalWithMessageVal.java
+ de.uniwue.jpp.errorhandling.OptionalWithMessageVal
+de/uniwue/jpp/mensabot/sending/formatting/analyse/TotalPricePerDayAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.TotalPricePerDayAnalyzer
+de/uniwue/jpp/mensabot/retrieval/Saver.java
+ de.uniwue.jpp.mensabot.retrieval.Saver
+de/uniwue/jpp/mensabot/dataclasses/MensaMenu.java
+ de.uniwue.jpp.mensabot.dataclasses.MensaMenu
+de/uniwue/jpp/mensabot/sending/formatting/analyse/MinPrizeMealAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.MinPrizeMealAnalyzer
+de/uniwue/jpp/mensabot/sending/formatting/analyse/Analyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.Analyzer
+de/uniwue/jpp/mensabot/sending/formatting/PricelessFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.PricelessFormatter
+de/uniwue/jpp/mensabot/sending/ImportData.java
+ de.uniwue.jpp.mensabot.sending.ImportData
+de/uniwue/jpp/mensabot/sending/SendData.java
+ de.uniwue.jpp.mensabot.sending.SendData
+de/uniwue/jpp/mensabot/dataclasses/Meal.java
+ de.uniwue.jpp.mensabot.dataclasses.Meal
+de/uniwue/jpp/mensabot/sending/formatting/PriceOnlyFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.PriceOnlyFormatter
+de/uniwue/jpp/mensabot/sending/Sender.java
+ de.uniwue.jpp.mensabot.sending.Sender
+de/uniwue/jpp/mensabot/sending/formatting/FormatterFromFormat.java
+ de.uniwue.jpp.mensabot.sending.formatting.FormatterFromFormat
+de/uniwue/jpp/mensabot/sending/formatting/RandomMealFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.RandomMealFormatter
+de/uniwue/jpp/mensabot/ControllerDummy.java
+ de.uniwue.jpp.mensabot.ControllerDummy
+de/uniwue/jpp/errorhandling/OptionalWithMessage.java
+ de.uniwue.jpp.errorhandling.OptionalWithMessage
+de/uniwue/jpp/mensabot/dataclasses/Solution.java
+ de.uniwue.jpp.mensabot.dataclasses.Solution
+de/uniwue/jpp/mensabot/sending/formatting/FormatterFromAnalyzer1.java
+ de.uniwue.jpp.mensabot.sending.formatting.FormatterFromAnalyzer1
+de/uniwue/jpp/mensabot/gui/GuiLauncher.java
+ de.uniwue.jpp.mensabot.gui.GuiLauncher
+de/uniwue/jpp/mensabot/sending/formatting/LongestNameFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.LongestNameFormatter
+de/uniwue/jpp/mensabot/retrieval/SaveData.java
+ de.uniwue.jpp.mensabot.retrieval.SaveData
+de/uniwue/jpp/mensabot/sending/formatting/analyse/TotalPrizeAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.TotalPrizeAnalyzer
+de/uniwue/jpp/errorhandling/OptionalWithMessageMsg.java
+ de.uniwue.jpp.errorhandling.OptionalWithMessageMsg
+de/uniwue/jpp/mensabot/retrieval/Parser.java
+ de.uniwue.jpp.mensabot.retrieval.Parser
+de/uniwue/jpp/mensabot/sending/Importer.java
+ de.uniwue.jpp.mensabot.sending.Importer
+de/uniwue/jpp/mensabot/sending/formatting/ComplexFormatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.ComplexFormatter
+de/uniwue/jpp/mensabot/sending/formatting/Formatter.java
+ de.uniwue.jpp.mensabot.sending.formatting.Formatter
+de/uniwue/jpp/mensabot/sending/formatting/analyse/AveragePricePerDayAnalyzer.java
+ de.uniwue.jpp.mensabot.sending.formatting.analyse.AveragePricePerDayAnalyzer
+de/uniwue/jpp/mensabot/gui/Controller.java
+ de.uniwue.jpp.mensabot.gui.Controller
+ de.uniwue.jpp.mensabot.gui.Controller$Stats
